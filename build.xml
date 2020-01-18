@@ -40,6 +40,10 @@
 
     <target name="junit" depends="tjar">
         <junit printsummary="yes">
+
+        <classpath location="${lib.dir}/ant-junit4.jar"/>
+        <classpath location="${lib.dir}/ant-junit.jar"/>
+
         <classpath refid="classpath" />
         <classpath location="test"/>
         <test name="hellotest" haltonfailure="no" todir="test/results">
