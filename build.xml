@@ -3,7 +3,7 @@
     <property name="lib.dir" value="/usr/share/ant/lib" />
     <path id="classpath">
         <pathelement location="${lib.dir}/ant-junit4.jar"/>
-        <pathelement location="${lib.dir}/ant-junit.jar"/>
+        <pathelement location="${lib.dir}/ant-junit"/>
     </path>
 
     <target name="clean">
@@ -40,9 +40,6 @@
 
     <target name="junit" depends="tjar">
         <junit printsummary="yes">
-
-        <classpath location="${lib.dir}/ant-junit4.jar"/>
-        <classpath location="${lib.dir}/ant-junit.jar"/>
 
         <classpath refid="classpath" />
         <classpath location="test"/>
